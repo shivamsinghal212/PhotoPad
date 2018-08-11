@@ -22,18 +22,45 @@
     width: 100px;
     height: 100px;
     padding-top: 25%;
-">
+    background:lightcoral;">
     <i class="large material-icons" style="font-size: 427%;">chevron_right
     </i>
   </a>
         </div>
     </div>
     <div data-role="page" id="app">
-        <div class="container">
-            <button onclick="openCamera()">click</button>
-            <img id="imageFile" height="30%" width="50%">
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper" style="background-color: #74D3AE;">
+                    <a href="#" class="brand-logo center" style="font-family: 'Amaranth', sans-serif;color: white;font-size: 2em;">PhotoPad</a>
+                </div>
+            </nav>
         </div>
-        
+        <div class="container">
+            <div id="photo_in">
+                <i id="cam_icon" class="material-icons">camera_alt</i>
+                <img id="imageFile">
+            </div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix" style="margin-top: inherit;">mode_edit</i>
+                            <textarea id="text_note" class="materialize-textarea" style="width: calc(100% - 5rem);margin-top: inherit;"></textarea>
+                            <label for="text_note" style="margin-top: inherit;">Note:</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#button2" id="refresh"><i class="material-icons">clear</i></a></li>
+                    <li><a href="#button2" id="submit"><i class="material-icons">check</i></a></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>

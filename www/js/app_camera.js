@@ -34,6 +34,18 @@ function openCamera(selection) {
 
 function displayImage(imgUri) {
 
-    var elem = document.getElementById('imageFile');
-    elem.src = imgUri;
+    // var elem = document.getElementById('imageFile');
+    // elem.src = imgUri;
+    $('#photo_in').css('background-image','url('+imgUri+')');
+    $('#cam_icon').hide();
 }
+
+function reset(){
+    $('#photo_in').css('background-image','');
+    $('#cam_icon').show();
+    $('#text_note').val('');
+}
+
+
+document.getElementById('cam_icon').addEventListener("click", openCamera);
+document.getElementById('refresh').addEventListener("click", reset);
